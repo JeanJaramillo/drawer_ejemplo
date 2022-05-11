@@ -43,6 +43,11 @@ class _MyHomePageState extends State<MyFirstPage> {
         const DrawerHeader(
           decoration: BoxDecoration(
             color: Colors.indigo,
+            image: DecorationImage(
+              image: AssetImage(
+              'assets/md1.png'),
+              fit: BoxFit.contain,
+            ),
           ),
           child: Text(
             'Menu',
