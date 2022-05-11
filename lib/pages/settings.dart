@@ -77,6 +77,18 @@ class _MyHomePageState extends State<MyHomePage> {
       if (valortext.toUpperCase() == "PTMR") {
         valortext = "Deberías mejorar tu léxico...";
       }
+       if (valortext.toUpperCase() == "9000") {
+        valortext = "It's over 9'000 !!!!";
+      }
+      if (valortext.toUpperCase() == "4") {
+        valortext = "Que parte de 'Del 1 al 3' no entendiste?";
+      }
+       if (valortext.toUpperCase() == "5") {
+        valortext = "Que parte de 'Del 1 al 3' no entendiste?";
+      }
+      if (valortext.toUpperCase() == "0") {
+        valortext = "Que parte de 'Del 1 al 3' no entendiste?";
+      }
       valorInput = valorInput + '\n' + valortext;
       controllertext.text = '';
     });
