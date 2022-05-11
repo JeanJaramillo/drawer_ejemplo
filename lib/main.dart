@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:drawer_ejemplo/pages/Battery.dart';
 import 'package:drawer_ejemplo/pages/settings.dart';
 import 'package:drawer_ejemplo/pages/Tapbar.dart';
+import 'package:drawer_ejemplo/pages/Navigator.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,7 +21,8 @@ class MyApp extends StatelessWidget {
       routes: <String, WidgetBuilder>{
         Settings.ruta: (BuildContext context) => Settings(),
         Battery.ruta: (BuildContext context) => Battery(),
-        Tapbar.ruta:(BuildContext context) => Tapbar(),
+        Tapbar.ruta: (BuildContext context) => Tapbar(),
+        Nav.ruta: (BuildContext context) => Nav(),
       },
     );
   }
@@ -45,9 +47,10 @@ class _MyHomePageState extends State<MyFirstPage> {
           accountEmail: Text('porthos@mosqueteros.com'),
           currentAccountPicture: CircleAvatar(
             backgroundColor: Colors.white,
-            child: Image(image: AssetImage(
-              'assets/md1.png'),),
+            child: Image(
+              image: AssetImage('assets/md1.png'),
             ),
+          ),
         ),
         AboutListTile(
           child: Text("Información del APP"),
@@ -85,10 +88,19 @@ class _MyHomePageState extends State<MyFirstPage> {
         ),
         ListTile(
           leading: Icon(Icons.tab),
-          title: Text("TapBar"),
+          title: Text("Platos y Cocineros"),
           onTap: () {
             setState(() {
               Navigator.of(context).pushNamed("/Tapbar");
+            });
+          },
+        ),
+        ListTile(
+          leading: Icon(Icons.window),
+          title: Text("¿Que buscas?"),
+          onTap: () {
+            setState(() {
+              Navigator.of(context).pushNamed("/Navigator");
             });
           },
         )
