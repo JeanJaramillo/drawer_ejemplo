@@ -5,7 +5,7 @@ class Plato extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Tab1"),
+        title: const Text("La rica Sopa de Zapallo"),
       ),
       body: Center(
         child: Column(
