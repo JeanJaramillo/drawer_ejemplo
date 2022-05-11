@@ -9,22 +9,17 @@ class Plato extends StatelessWidget {
       ),
       body: Center(
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            MyCard(
-                title: const Text(
-                    'Hemos preparado una reunión \n de 10 personas en mi piso y calculando la distancia \n de seguridad: 2 tienen que caerse por el balcón, \n uno cenará en el ascensor y otro tendrá que irse \n a casa de la vecina.',
-                    textAlign: TextAlign.center,
-                    overflow: TextOverflow.ellipsis,
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black,
-                        fontSize: 15)),
-                icon: const Icon(
-                  Icons.face_outlined,
-                  size: 50,
-                  color: Colors.cyan,
-                )),
+            Container(
+              child: Column(children: [
+                Image.asset('assets/sopa.jpg', fit: BoxFit.contain)
+              ]),
+            ),
+            Text(
+              '"Sopa de zapallo"',
+              style: TextStyle(fontSize: 20),
+            )
           ],
         ),
       ),
