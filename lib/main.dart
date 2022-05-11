@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:drawer_ejemplo/pages/Battery.dart';
 import 'package:drawer_ejemplo/pages/settings.dart';
+import 'package:drawer_ejemplo/pages/Tapbar.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +19,8 @@ class MyApp extends StatelessWidget {
       home: const MyFirstPage(title: 'MOSQUETEROS APP'),
       routes: <String, WidgetBuilder>{
         Settings.ruta: (BuildContext context) => Settings(),
-        Battery.ruta: (BuildContext context) => Battery()
+        Battery.ruta: (BuildContext context) => Battery(),
+        Tapbar.ruta:(BuildContext context) => Tapbar(),
       },
     );
   }
@@ -77,10 +79,19 @@ class _MyHomePageState extends State<MyFirstPage> {
         ),
         ListTile(
           leading: Icon(Icons.battery_charging_full),
-          title: Text("Bateria"),
+          title: Text("Sopa de Zapallo Paso a Paso"),
           onTap: () {
             setState(() {
               Navigator.of(context).pushNamed("/Battery");
+            });
+          },
+        ),
+        ListTile(
+          leading: Icon(Icons.tab),
+          title: Text("TapBar"),
+          onTap: () {
+            setState(() {
+              Navigator.of(context).pushNamed("/Tapbar");
             });
           },
         )
