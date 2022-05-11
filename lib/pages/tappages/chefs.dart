@@ -21,7 +21,7 @@ class Chefs extends StatelessWidget {
             child: Text(
               "Luz Cornelio, Otaku desde antes de reencarnar.",
               textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 20),
+              style: TextStyle(fontSize: 20, color: Colors.grey),
             ),
           ),
           Container(
