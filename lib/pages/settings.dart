@@ -10,7 +10,7 @@ class Settings extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.indigo,
       ),
-      home: const MyHomePage(title: 'OH SI, ANIMES...'),
+      home: const MyHomePage(title: 'COMENTA UN PUNTAJE'),
     );
   }
 }
@@ -33,17 +33,17 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Container(
               padding: EdgeInsets.all(15.0),
               margin: EdgeInsets.all(1.0),
               child: Image.network(
-                  "https://i.pinimg.com/originals/4e/91/af/4e91af4d3b8a531c8da9f5d7c54943b5.gif"),
+                  "https://64.media.tumblr.com/a3fbaa336366d9c3d74fbf994c2d7509/tumblr_pn0c17dpyg1uuj1vto1_540.gifv"),
             ),
             TextField(
-              decoration:
-                  const InputDecoration(hintText: "Ingrese el texto aquí"),
+              decoration: const InputDecoration(
+                  hintText: "¿Del 1 al 3 que tanto te gusta la imagen?"),
               onSubmitted: (String valortext) {
                 cambiar(valortext);
               },
@@ -59,17 +59,23 @@ class _MyHomePageState extends State<MyHomePage> {
   void cambiar(String valortext) {
     // ignore: avoid_print
     setState(() {
-      if (valortext.toUpperCase() == "PERRO") {
-        valortext = "Firulais";
+      if (valortext.toUpperCase() == "1") {
+        valortext = "Aún estás a tiempo...";
       }
-      if (valortext.toUpperCase() == "GATO") {
-        valortext = "Michi";
+      if (valortext.toUpperCase() == "2") {
+        valortext = "Bueno, ya debes tener una novia 2D";
       }
-      if (valortext.toUpperCase() == "CTMR") {
-        valortext = "¿Con esa boca besas a tu madre?";
+      if (valortext.toUpperCase() == "3") {
+        valortext = "¿Cuando fue la última vez que te bañaste?";
       }
       if (valortext.toUpperCase() == "HDP") {
         valortext = "¿Con esa boca besas a tu madre?";
+      }
+      if (valortext.toUpperCase() == "CTMR") {
+        valortext = "Lavate la boca con jabón";
+      }
+      if (valortext.toUpperCase() == "PTMR") {
+        valortext = "Deberías mejorar tu léxico...";
       }
       valorInput = valorInput + '\n' + valortext;
       controllertext.text = '';

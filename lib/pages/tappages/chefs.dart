@@ -7,46 +7,69 @@ class Chefs extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Tab2"),
       ),
-      body: Center(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: <Widget>[
-            MyCard(
-                title: const Text(
-                    'Hemos preparado una reunión \n de 10 personas en mi piso y calculando la distancia \n de seguridad: 2 tienen que caerse por el balcón, \n uno cenará en el ascensor y otro tendrá que irse \n a casa de la vecina.',
-                    textAlign: TextAlign.center,
-                    overflow: TextOverflow.ellipsis,
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black,
-                        fontSize: 15)),
-                icon: const Icon(
-                  Icons.face_outlined,
-                  size: 50,
-                  color: Colors.cyan,
-                )),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-class MyCard extends StatelessWidget {
-  final Widget title;
-  final Widget icon;
-
-  MyCard({required this.title, required this.icon});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.only(bottom: 3.0),
-      child: Card(
-        margin: const EdgeInsets.all(25),
-        child: Column(
-          children: <Widget>[title, icon],
-        ),
+      body: ListView(
+        children: <Widget>[
+          Container(
+            padding: EdgeInsets.all(15.0),
+            child: Image.asset(
+              'assets/luz.jpg',
+              width: 200.0,
+            ),
+          ),
+          Container(
+            padding: EdgeInsets.all(20.0),
+            child: Text(
+              "Luz Cornelio, Otaku desde antes de reencarnar.",
+              textAlign: TextAlign.center,
+              style: TextStyle(fontSize: 20),
+            ),
+          ),
+          Container(
+            padding: EdgeInsets.all(15.0),
+            child: Image.asset(
+              'assets/diego.jpg',
+              width: 200.0,
+            ),
+          ),
+          Container(
+            padding: EdgeInsets.all(20.0),
+            child: Text(
+              "Diego Pinillos, Tiene muchas botellas de alcohol.",
+              textAlign: TextAlign.center,
+              style: TextStyle(fontSize: 20),
+            ),
+          ),
+          Container(
+            padding: EdgeInsets.all(15.0),
+            child: Image.asset(
+              'assets/joao.jpg',
+              width: 200.0,
+            ),
+          ),
+          Container(
+            padding: EdgeInsets.all(20.0),
+            child: Text(
+              "Joao Riofrio, No le tema a los fantasmas nocturnos.",
+              textAlign: TextAlign.center,
+              style: TextStyle(fontSize: 20),
+            ),
+          ),
+          Container(
+            padding: EdgeInsets.all(15.0),
+            child: Image.asset(
+              'assets/jean.jpg',
+              width: 200.0,
+            ),
+          ),
+          Container(
+            padding: EdgeInsets.all(20.0),
+            child: Text(
+              "Jean Rafael, Después de la foto tomó 5 Sorojchi.",
+              textAlign: TextAlign.center,
+              style: TextStyle(fontSize: 20),
+            ),
+          ),
+        ],
       ),
     );
   }

@@ -12,7 +12,7 @@ class Tapbar extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.indigo,
       ),
-      home: const MyHomePage(title: 'TapBar Mosqueteros Digitales'),
+      home: const MyHomePage(title: 'Mosqueteros Chefs'),
     );
   }
 }
