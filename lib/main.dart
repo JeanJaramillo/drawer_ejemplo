@@ -40,22 +40,14 @@ class _MyHomePageState extends State<MyFirstPage> {
   Widget build(BuildContext context) {
     ListView lista = ListView(
       children: [
-        const DrawerHeader(
-          decoration: BoxDecoration(
-            color: Colors.indigo,
-            image: DecorationImage(
-              image: AssetImage(
-              'assets/md1.png'),
-              fit: BoxFit.contain,
+        UserAccountsDrawerHeader(
+          accountName: Text('Porthos'),
+          accountEmail: Text('porthos@mosqueteros.com'),
+          currentAccountPicture: CircleAvatar(
+            backgroundColor: Colors.white,
+            child: Image(image: AssetImage(
+              'assets/md1.png'),),
             ),
-          ),
-          child: Text(
-            'Menu',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 24,
-            ),
-          ),
         ),
         AboutListTile(
           child: Text("Información del APP"),
