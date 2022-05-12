@@ -10,7 +10,7 @@ class Nav extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.green,
       ),
-      home: const MyFirstPage(title: 'Dragon Ball Z'),
+      home: const MyFirstPage(title: '¿Sabes lo que buscas?'),
     );
   }
 }
@@ -41,8 +41,8 @@ class _MyHomePageState extends State<MyFirstPage> {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) =>
-                              const MySecondPage(title: 'La mejor batalla')));
+                          builder: (context) => const MySecondPage(
+                              title: '¿Seguro que no deseas continuar?')));
                 },
                 child: const Text("Adelante",
                     style: TextStyle(color: Colors.white)))
@@ -76,7 +76,7 @@ class MySecondPage extends StatelessWidget {
                       context,
                       MaterialPageRoute(
                           builder: (context) =>
-                              const MyThirdPage(title: 'El mejor equipo')));
+                              const MyThirdPage(title: '¡Lo lograste!')));
                 },
                 child: const Text("Adelante",
                     style: TextStyle(color: Colors.white))),
