@@ -7,9 +7,7 @@ class Nav extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'App1',
-      theme: ThemeData(
-        primarySwatch: Colors.green,
-      ),
+      theme: ThemeData(primarySwatch: Colors.indigo),
       home: const MyFirstPage(title: '¿Sabes lo que buscas?'),
     );
   }
@@ -41,8 +39,8 @@ class _MyHomePageState extends State<MyFirstPage> {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const MySecondPage(
-                              title: '¿Seguro que no deseas continuar?')));
+                          builder: (context) =>
+                              const MySecondPage(title: '¿Te vas a detener?')));
                 },
                 child: const Text("Adelante",
                     style: TextStyle(color: Colors.white)))
