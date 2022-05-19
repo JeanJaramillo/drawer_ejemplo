@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:drawer_ejemplo/pages/tappages/plato.dart';
 import 'package:drawer_ejemplo/pages/tappages/chefs.dart';
+import 'package:drawer_ejemplo/pages/tappages/eventos.dart';
 
 class Tapbar extends StatelessWidget {
   static const String ruta = "/Tapbar";
@@ -31,7 +32,7 @@ class _MyHomePageState extends State<MyHomePage>
   @override
   void initState() {
     super.initState();
-    controlador = TabController(length: 2, vsync: this);
+    controlador = TabController(length: 3, vsync: this);
   }
 
   @override
@@ -41,15 +42,16 @@ class _MyHomePageState extends State<MyHomePage>
         title: Text(widget.title),
         bottom: TabBar(
           tabs: <Widget>[
-            Tab(icon: Icon(Icons.food_bank)),
-            Tab(icon: Icon(Icons.photo)),
+            Tab(icon: Icon(Icons.person)),
+            Tab(icon: Icon(Icons.map)),
+            Tab(icon: Icon(Icons.calendar_today)),
           ],
           controller: controlador,
         ),
       ),
       body: Center(
         child: TabBarView(
-          children: [Plato(), Chefs()],
+          children: [Plato(), Chefs(), Eventos()],
           controller: controlador,
         ),
       ),

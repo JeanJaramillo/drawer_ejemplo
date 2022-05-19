@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:drawer_ejemplo/pages/Battery.dart';
-import 'package:drawer_ejemplo/pages/settings.dart';
+import 'package:drawer_ejemplo/pages/Login.dart';
 import 'package:drawer_ejemplo/pages/Tapbar.dart';
 import 'package:drawer_ejemplo/pages/Navigator.dart';
 
@@ -17,9 +17,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.indigo,
       ),
-      home: const MyFirstPage(title: 'MOSQUETEROS APP'),
+      home: const MyFirstPage(title: 'OTR APP'),
       routes: <String, WidgetBuilder>{
-        Settings.ruta: (BuildContext context) => Settings(),
+        Login.ruta: (BuildContext context) => Login(),
         Battery.ruta: (BuildContext context) => Battery(),
         Tapbar.ruta: (BuildContext context) => Tapbar(),
         Nav.ruta: (BuildContext context) => Nav(),
@@ -61,10 +61,10 @@ class _MyHomePageState extends State<MyFirstPage> {
         ),
         ListTile(
           leading: const Icon(Icons.add_comment),
-          title: const Text("Mira y Comenta"),
+          title: const Text("Inicia Sesión"),
           onTap: () {
             setState(() {
-              Navigator.of(context).pushNamed("/Settings");
+              Navigator.of(context).pushNamed("/Login");
             });
           },
         ),
